@@ -1,0 +1,242 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{antman}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a1f7b47734a4beddc481dbc6aadab463}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a1f7b47734a4beddc481dbc6aadab463}
+      \strng{fullhash}{a1f7b47734a4beddc481dbc6aadab463}
+      \strng{bibnamehash}{a1f7b47734a4beddc481dbc6aadab463}
+      \strng{authorbibnamehash}{a1f7b47734a4beddc481dbc6aadab463}
+      \strng{authornamehash}{a1f7b47734a4beddc481dbc6aadab463}
+      \strng{authorfullhash}{a1f7b47734a4beddc481dbc6aadab463}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nonlinear Problems of Elasticity}
+      \field{year}{2005}
+      \true{nocite}
+    \endentry
+    \entry{ball-convexity}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d59843927c90e2aa3fa749ebbf495e28}{%
+           family={Ball},
+           familyi={B\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{fullhash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{bibnamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authorbibnamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authornamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authorfullhash}{d59843927c90e2aa3fa749ebbf495e28}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Arch. Rational Mech. Anal.}
+      \field{title}{Convexity conditions and existence theorems in nonlinear elasticity}
+      \field{volume}{63}
+      \field{year}{1976}
+      \field{pages}{337\bibrangedash 403}
+      \range{pages}{67}
+    \endentry
+    \entry{brezis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b4a3c6d87effacaa6bd65afad9f0a2b5}{%
+           family={Brezis},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \strng{fullhash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \strng{bibnamehash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \strng{authorbibnamehash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \strng{authornamehash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \strng{authorfullhash}{b4a3c6d87effacaa6bd65afad9f0a2b5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Functional Analysis, Sobolev Spaces and Partial Differential Equations}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{casciaro}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=9baf8b6e8b5d58a2a3e8a28de9762b1f}{%
+           family={Casciaro},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \strng{fullhash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \strng{bibnamehash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \strng{authorbibnamehash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \strng{authornamehash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \strng{authorfullhash}{9baf8b6e8b5d58a2a3e8a28de9762b1f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Phenomenological and Mathematical Modelling of Structural Instabilities}
+      \field{title}{Computational asymptotic post-buckling analysis of slender elastic structures}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{pages}{195\bibrangedash 276}
+      \range{pages}{82}
+    \endentry
+    \entry{gurtin-anand-fried}{book}{}
+      \name{author}{3}{}{%
+        {{hash=282dc14781708c08359a404ba6b869cf}{%
+           family={Gurtin},
+           familyi={G\bibinitperiod},
+           given={M.E.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=94020b1b13632c0ee1b72899148da51f}{%
+           family={Fried},
+           familyi={F\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9fb636623b2df5eba21f3c1cf6d15f6a}{%
+           family={Anand},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \strng{fullhash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \strng{bibnamehash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \strng{authorbibnamehash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \strng{authornamehash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \strng{authorfullhash}{cf16c2b3be3783ae3ca173236fc2564f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Mechanics and Thermodynamics of Continua}
+      \field{year}{2010}
+    \endentry
+    \entry{koiter}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c7426fdd9fbf8856080f145276057f48}{%
+           family={Koiter},
+           familyi={K\bibinitperiod},
+           given={W.T.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Air Force Flight Dynamics Laboratory}%
+      }
+      \strng{namehash}{c7426fdd9fbf8856080f145276057f48}
+      \strng{fullhash}{c7426fdd9fbf8856080f145276057f48}
+      \strng{bibnamehash}{c7426fdd9fbf8856080f145276057f48}
+      \strng{authorbibnamehash}{c7426fdd9fbf8856080f145276057f48}
+      \strng{authornamehash}{c7426fdd9fbf8856080f145276057f48}
+      \strng{authorfullhash}{c7426fdd9fbf8856080f145276057f48}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Stability of Elastic Equilibrium}
+      \field{year}{1945}
+    \endentry
+    \entry{niremberg}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a49640bceb4b60e2a712ef4a25ce9fff}{%
+           family={Niremberg},
+           familyi={N\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AMS/Courant Institute of Mathematical Sciences}%
+      }
+      \strng{namehash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \strng{fullhash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \strng{bibnamehash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \strng{authorbibnamehash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \strng{authornamehash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \strng{authorfullhash}{a49640bceb4b60e2a712ef4a25ce9fff}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Topics in Nonlinear Functional Analysis}
+      \field{year}{2001}
+    \endentry
+    \entry{truesdell-noll}{book}{}
+      \name{author}{2}{}{%
+        {{hash=ccbb8dcd70875a6d71d02f6527f6032e}{%
+           family={Truesdell},
+           familyi={T\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=91abef876425ee733646c4c40a27bbc8}{%
+           family={Noll},
+           familyi={N\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{428b58b90d5905d14d953fa18d28f820}
+      \strng{fullhash}{428b58b90d5905d14d953fa18d28f820}
+      \strng{bibnamehash}{428b58b90d5905d14d953fa18d28f820}
+      \strng{authorbibnamehash}{428b58b90d5905d14d953fa18d28f820}
+      \strng{authornamehash}{428b58b90d5905d14d953fa18d28f820}
+      \strng{authorfullhash}{428b58b90d5905d14d953fa18d28f820}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Non-Linear Field Theories of Mechanics}
+      \field{year}{2004}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
