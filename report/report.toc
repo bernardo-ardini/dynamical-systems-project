@@ -1,49 +1,49 @@
-\contentsline {section}{\numberline {1}Notation and basic notions}{1}{}%
-\contentsline {paragraph}{Operators in Banach spaces}{1}{}%
+\contentsline {section}{\numberline {1}Notation and basic notions}{2}{}%
+\contentsline {paragraph}{Operators in Banach spaces}{2}{}%
 \contentsline {paragraph}{Duality}{2}{}%
 \contentsline {paragraph}{Fréchet derivatives}{2}{}%
 \contentsline {section}{\numberline {2}Preliminary results}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Orthogonal spaces}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Self-adjoint operators}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Self-adjoint operators}{3}{}%
 \contentsline {subsection}{\numberline {2.3}Complemented spaces and codimension}{3}{}%
 \contentsline {section}{\numberline {3}Bifurcation theory in Banach spaces}{4}{}%
-\contentsline {subsection}{\numberline {3.1}The Implicit Function Theorem}{4}{}%
+\contentsline {subsection}{\numberline {3.1}The Implicit Function Theorem}{5}{}%
 \contentsline {subsection}{\numberline {3.2}The Lyapunov--Schmidt procedure}{5}{}%
-\contentsline {subsection}{\numberline {3.3}A local bifurcation theorem}{5}{}%
+\contentsline {subsection}{\numberline {3.3}A local bifurcation theorem of Crandall and Rabinowitz}{6}{}%
 \contentsline {section}{\numberline {4}Buckling of general nonlinear elastic structures}{7}{}%
-\contentsline {subsection}{\numberline {4.1}Critical points}{7}{}%
+\contentsline {subsection}{\numberline {4.1}Critical points}{8}{}%
 \contentsline {paragraph}{Limit points}{8}{}%
 \contentsline {paragraph}{Bifurcation points}{8}{}%
 \contentsline {subsection}{\numberline {4.2}A local bifurcation theorem suitable for the elastic buckling analysis}{9}{}%
-\contentsline {subsection}{\numberline {4.3}Koiter asymptotic analysis}{10}{}%
-\contentsline {paragraph}{Fundamental path}{10}{}%
-\contentsline {paragraph}{Critical load}{10}{}%
-\contentsline {paragraph}{Elastic buckling}{10}{}%
+\contentsline {subsection}{\numberline {4.3}Koiter asymptotic analysis}{11}{}%
+\contentsline {paragraph}{Fundamental path}{11}{}%
+\contentsline {paragraph}{Critical load}{11}{}%
+\contentsline {paragraph}{Elastic buckling}{11}{}%
 \contentsline {paragraph}{First order approximation}{11}{}%
 \contentsline {paragraph}{Second order approximation}{11}{}%
-\contentsline {section}{\numberline {5}Buckling of Euler beam under vertical loads}{11}{}%
+\contentsline {section}{\numberline {5}Buckling of Euler beam under vertical loads}{12}{}%
 \contentsline {subsection}{\numberline {5.1}The Euler beam model}{12}{}%
 \contentsline {paragraph}{Kinematics}{12}{}%
 \contentsline {paragraph}{Statics}{12}{}%
-\contentsline {paragraph}{Euler's constitutive assumption}{12}{}%
+\contentsline {paragraph}{Euler's constitutive assumption}{13}{}%
 \contentsline {subsection}{\numberline {5.2}Formulation of the problem}{13}{}%
-\contentsline {subsection}{\numberline {5.3}A technical lemma}{13}{}%
+\contentsline {subsection}{\numberline {5.3}A technical lemma}{14}{}%
 \contentsline {subsection}{\numberline {5.4}Application of the local bifurcation theorem}{14}{}%
-\contentsline {subsection}{\numberline {5.5}Application of Koiter asymptotic analysis}{14}{}%
+\contentsline {subsection}{\numberline {5.5}Application of Koiter asymptotic analysis}{15}{}%
 \contentsline {section}{\numberline {6}Buckling of hyperelastic continuous bodies}{15}{}%
 \contentsline {subsection}{\numberline {6.1}The theory of nonlinear hyperelastic materials}{15}{}%
-\contentsline {paragraph}{Reference configuration and deformed configuration}{15}{}%
-\contentsline {paragraph}{Dirichlet boundary conditions}{15}{}%
-\contentsline {paragraph}{Measures of strain}{15}{}%
-\contentsline {paragraph}{Elastic energy density}{15}{}%
+\contentsline {paragraph}{Reference configuration and deformed configuration}{16}{}%
+\contentsline {paragraph}{Dirichlet boundary conditions}{16}{}%
+\contentsline {paragraph}{Local measures of strain}{16}{}%
+\contentsline {paragraph}{Elastic energy density}{16}{}%
 \contentsline {paragraph}{Elastic energy of the body}{16}{}%
-\contentsline {paragraph}{Energy of the loads}{16}{}%
-\contentsline {paragraph}{Total energy of the body}{16}{}%
-\contentsline {paragraph}{Equilibrium equation}{16}{}%
+\contentsline {paragraph}{Energy of the loads}{17}{}%
+\contentsline {paragraph}{Total energy of the body}{17}{}%
+\contentsline {paragraph}{The equilibrium equation}{17}{}%
 \contentsline {subsection}{\numberline {6.2}On the applicability of the local bifurcation theorem}{17}{}%
-\contentsline {subsection}{\numberline {6.3}Finite element implementation of Koiter asymptotic analysis}{17}{}%
-\contentsline {paragraph}{Finite element approximation}{17}{}%
+\contentsline {subsection}{\numberline {6.3}Finite element implementation of Koiter asymptotic analysis}{18}{}%
+\contentsline {paragraph}{Finite element approximation}{18}{}%
 \contentsline {paragraph}{Determination of the fundamental path}{18}{}%
 \contentsline {paragraph}{Determination of the critical load}{18}{}%
-\contentsline {paragraph}{Second order approximation of the buckling path}{18}{}%
-\contentsline {paragraph}{Some examples}{18}{}%
+\contentsline {paragraph}{Second order approximation of the buckling path}{19}{}%
+\contentsline {paragraph}{Some examples}{19}{}%

@@ -66,17 +66,27 @@
 
 \maketitle
 
+\begin{abstract}
+This short account deal with the mathematical problems related to the study of the buckling on nonlinear elastic structures. This phenomenon occurs when an elastic structure, which is typically slender, subject to an increasing external load suddenly loses its stability.
+
+The mathematical description of buckling is based on bifurcation theory. Most of the mechanical models used in practice are continuous meaning that results valid in infinite dimensional spaces, in particular Banach spaces, are required.
+
+This work is organized as follows. In Section~\ref{sec:basics} is presented the notation that will be used. In Section~\ref{sec:preliminary} are collected some classical facts on Banach spaces. A brief outline of bifurcation theory in Banach spaces is in Section~\ref{sec:bifurcation}. In particular the Crandall-Rabinowitz theorem is proved. Starting from this theorem, in Section~\ref{sec:general-buckling} we develop a general theory for treating the buckling of nonlinear elastic structure. It is an attempt to make rigorous the heuristic consideration in~\cite{casciaro}. In Section~\ref{sec:euler-beam} we show how to apply the general theory to a classical problem in Structural Mechanics, namely the buckling of Euler beam. Lastly, in Section~\ref{sec:body}, we describe our efforts, far to be successful, to apply the general theory of elastic buckling to the model of nonlinear hyperelastic continuous bodies. In the same Section we also treat the Finite Element discretization of the problem and we provide some concrete examples.
+\end{abstract}
+
 \tableofcontents
 
 \section{Notation and basic notions}
+\label{sec:basics}
 
 \paragraph{Operators in Banach spaces} Given two Banach space $X$ and $E$ we denote by $\mathscr{L}(X,E)$ the set of linear and continuous maps from $X$ into $E$. The set of compact linear maps from $X$ into $E$ is denoted by $\mathscr{K}(X,E)$. Given $A\in\mathscr{L}(X,E)$ we call $N(A)$ and $R(A)$ its null-space and range respectively. We say that $A\in\text{Iso}(X,E)$ if $N(A)=\{0\}$ and $R(A)=E$. By closed graph theorem this implies that $A^{-1}\in\mathscr{L}(E,X)$.
 
 \paragraph{Duality} The symbol $(\cdot,\cdot)$ always denotes the inner product in $L^2$. The duality between a Banach space $V$ and its dual $V'$ is denoted by $\dual{f,v}$ for $v\in V$ and $f\in V'$. Sometimes we will write simply $fv$ instead. In particular if $L\in\mathscr{L}(V,V')$ then $Lvw=\dual{Lv,w}$ for $v,w\in V$. We will use also notations like $Lv^2=Lvv$ for $v\in V$.
 
-\paragraph{Fréchet derivatives} Given a $C^1$ map $F$ from an open subset $U$ of Banach space $X$ into another Banach space $E$, its Fréchet derivative is a map $DF=F'\in C^0(U,\mathscr{L}(X,E))$. In particular if $\Pi$ is a $C^2$ map from a Banach space $V$ into $\mathbb{R}$, its Fréchet derivative is a map $\Pi'\in C^1(V,V')$. The double Fréchet derivative is a map $\Pi''\in C^0(V,\mathscr{L}(V,V'))$. By Schwartz theorem $\Pi''(u)vw=\Pi''(u)wv$ for all $u\in V$ and $v,w\in V$. Similar considerations holds for higher order Fréchet derivatives.
+\paragraph{Fréchet derivatives} Given a $C^1$ map $F$ from an open subset $U$ of Banach space $X$ into another Banach space $E$, its Fréchet derivative is a map $DF=F'\in C^0(U,\mathscr{L}(X,E))$. In particular if $\Phi$ is a $C^2$ map from a Banach space $V$ into $\mathbb{R}$, its Fréchet derivative is a map $\Phi'\in C^1(V,V')$. The double Fréchet derivative is a map $\Phi''\in C^0(V,\mathscr{L}(V,V'))$. By Schwartz theorem $\Phi''(u)vw=\Phi''(u)wv$ for all $u\in V$ and $v,w\in V$. Similar considerations holds for higher order Fréchet derivatives.
 
 \section{Preliminary results}
+\label{sec:preliminary}
 
 In this Section are collected some results on Banach spaces that will be useful later.
 
@@ -107,7 +117,7 @@ By contradiction let $v_0\in(N^\perp)^\perp$ such that $v_0\notin\overline{N}$. 
 \[
 \dual{f,v}<\alpha<\dual{f,v_0}\quad\text{for all $v\in N$}.
 \]
-Since $N$ is a linear subspace, $\dual{f,v}=0$ for all $v\in N$. Then it must be $\dual{f,v_0}>0$. Moreover $f\in N^\perp$ so $\dual{f,v_0}=0$. Contradiction.
+Since $N$ is a linear subspace, $\dual{f,v}=0$ for all $v\in N$ meaning that $f\in N^\perp$. In particular $\dual{f,v_0}=0$. This a contradiction.
 
 Now assume that $V$ is reflexive. By contradiction let $f_0\in(R^\perp)^\perp$ such that $f_0\notin\overline{R}$. Then by Hahn-Banach $\{f_0\}$ and $\overline{R}$ are strictly separated, so there exists $\xi\in V''$ and $\alpha\in\mathbb{R}$ such that
 \[
@@ -190,25 +200,22 @@ The thesis follows by Proposition~\ref{prop:codim}.
 \end{proof}
 
 \section{Bifurcation theory in Banach spaces}
+\label{sec:bifurcation}
 
 Let $X$ and $E$ be Banach spaces. Consider a map $F$ of class $C^r$, with $r\ge1$, from a neighborhood of $x_0\in X$ into $E$ such that $F(x_0)=0$. We are concerned with the equation
 \[
 F(x)=0
 \]
-when $x$ is near $x_0$. By making a change of variable we can always assume that $x_0=0$. When the inverse function theorem applies the set of solutions around the origin is a regular manifold. When it does not apply it can be more complicated and bifurcations can occur.
+when $x$ is near $x_0$. By making a change of variable we can always assume that $x_0=0$. When the Inverse Function Theorem applies the set of solutions around the origin is a regular manifold. When it does not apply it can be more complicated and bifurcations can occur.
 
-In this Section we first recall the Implicit Function Theorem. Then we present the Lyapunov-Schmidt procedure, a tool allowing us to reduce the study of the set of solutions to the equation $F(x)=0$ to a simpler problem involving only finite dimensional spaces. Then we will prove a theorem that gives sufficient conditions for the existence of a bifurcation. All the results of this Section are taken from~\cite{niremberg}.
+In this Section we first recall the Implicit Function Theorem. Then we present the Lyapunov-Schmidt procedure, a tool allowing us to reduce the study of the set of solutions to the equation $F(x)=0$ to a simpler problem involving only finite dimensional spaces. Then we will prove a theorem of Crandall and Rabinowitz that gives sufficient conditions for the existence of a bifurcation. All the results of this Section are taken from~\cite{niremberg}.
 
 \subsection{The Implicit Function Theorem}
 
 The following theorem is a well known form of the Implicit Function Theorem.
 \begin{thm}
 \label{thm:IFT}
-Let $V$, $\Lambda$ and $E$ be Banach spaces and $U\subset V\times\Lambda$ open. Let $F=F(u,\lambda)\in C^r(U,E)$ with $r\ge1$. Let $(u_0,\lambda_0)\in U$ such that $F(u_0,\lambda_0)=0$ and $D_uF(u_0,\lambda_0)\in\text{Iso}(V,E)$. Then there exists $\delta>0$ and a unique $u\in C^r(B(\lambda_0,\delta),V)$ such that $u(\lambda_0)=u_0$ and
-\[
-F(u(\lambda),\lambda)=0
-\]
-for all $\lambda\in B(\lambda_0,\delta)$.
+Let $V$, $\Lambda$ and $E$ be Banach spaces. Let $F=F(u,\lambda)$ be a $C^r$ map, with $r\ge1$, from a neighborhood of $(u_0,\lambda_0)\in V\times\Lambda$ into $E$ such that $F(u_0,\lambda_0)=0$ and $D_uF(u_0,\lambda_0)\in\text{Iso}(V,E)$. Then there exists a $C^r$ map $\upsilon$ from a neighborhood of $\lambda_0$ into $V$ such that $\upsilon(\lambda_0)=u_0$ and locally around $(u_0,\lambda_0)$ the solutions $(u,\lambda)$ to $F(u,\lambda)=0$ satisfies $u=\upsilon(\lambda)$.
 \end{thm}
 
 We report below an alternative form of the Implicit Function Theorem which is more suitable for treating the problem described at the beginning of this Section.
@@ -239,11 +246,11 @@ Let $X$ and $E$ be Banach spaces and $F$ a map of class $C^r$, with $r\ge1$, fro
 \item[(a)] $N(DF(0))=X_1$ has finite dimension $n$ and
 \item[(b)] $R(DF(0))=E_1$ is a closed subspace of finite codimension.
 \end{itemize}
-Let $X_2$ and $E_2$ some complements of $X_1$ and $E_1$ respectively. Then consider the projection $Q$ into $E_1$ associated to the decomposition $E=E_1\otimes E_2$. Now equation $F(x)=0$ can be written as
+Let $X_2$ and $E_2$ some complements of $X_1$ and $E_1$ respectively. Then consider the projection $Q$ into $E_1$ associated to the decomposition $E=E_1\oplus E_2$. Now equation $F(x)=0$ can be written as
 \[
 QF(x)=0\quad\text{and}\quad (I-Q)F(x)=0.
 \]
-Let $G(x)=QF(x)$ where $G$ is defined in a neighborhood of $0$ into $E_1$. Now by applying Corollary~\ref{cor:alt-IFT} we have that there exists $\chi$ of class $C^r$ from a neighborhood of the origin in $X_1$ into $X_2$ such that $\chi(0)=0$ and
+Let $x\mapsto QF(x)$ be defined in a neighborhood of $0$ into $E_1$. Now by applying Corollary~\ref{cor:alt-IFT} to it we have that there exists $\chi$ of class $C^r$ from a neighborhood of the origin in $X_1$ into $X_2$ such that $\chi(0)=0$ and
 \[
 QF(x_1+\chi(x_1))=0.
 \]
@@ -258,11 +265,11 @@ If $E_1=E$ then $E_2=0$ and equation~\eqref{eqn:finite-dim} is trivially satisfi
 
 When $R(DF(0))\neq E$ bifurcations can occur. We confine ourself with the case in which $\codim(E_1)=\dim(E_2)=1$. In this case equation~\eqref{eqn:finite-dim} is actually a scalar equation. Indeed by Proposition~\ref{prop:codim} there exists $\xi\in E'$ such that $E_1=\{f\in E\;|\;\dual{\xi,f}=0\}$, so the bifurcation equation can be rewritten as
 \[
-G(x_1)=\dual{\xi,F(x_1+\chi(x_1))}=0.
+G(x_1):=\dual{\xi,F(x_1+\chi(x_1))}=0.
 \]
 By choosing a basis in $X_1$, the function $G$ can be understood as a function from a neighborhood of the origin in $\mathbb{R}^n$ into $\mathbb{R}$.
 
-\subsection{A local bifurcation theorem}
+\subsection{A local bifurcation theorem of Crandall and Rabinowitz}
 
 We now want to understand under which conditions from equation $G(x_1)=0$ arise a bifurcation. The following result will be useful.
 \begin{lemma}[Morse lemma]
@@ -298,16 +305,15 @@ so we have
 \]
 which is exactly the equation of two lines intersecting at the origin.
 
-Applying the change of variable, we find that the set of solutions to $G(x)=0$ is a deformation of these two lines. When $r\ge3$ then the change of variable is at least $C^1$ and the Jacobian matrix is the identity at the origin so the two curves still intersect transversally.
+Applying the change of variable, we find that the set of solutions to $G(x)=0$ around the origin is a deformation of these two lines. When $r\ge3$ then the change of variable is at least $C^1$ and the Jacobian matrix is the identity at the origin so the two curves still intersect transversally.
 \end{proof}
 Now we can obtain the main result of this Section.
-\begin{thm}
+\begin{thm}[Crandall and Rabinowitz]
 \label{thm:gen-bif}
 Let $X$ and $E$ be Banach spaces and $F$ a map of class $C^r$, with $r\ge2$, from a neighborhood of the origin in $X$ into $E$ such that $F(0)=0$. Assume that
 \begin{itemize}
-\item[(i)] $DF(0)$ is Fredholm,
-\item [(ii)] $N(DF(0))$ has dimension 2,
-\item[(iii)] $R(DF(0))$ is closed and has codimension 1.
+\item [(i)] $N(DF(0))$ has dimension 2 and
+\item[(ii)] $R(DF(0))$ is closed and has codimension 1.
 \end{itemize}
 Let $\xi\in E'$ such that $R(DF(0))=\{f\in E\;|\;\dual{\xi,f}=0\}$. Define a 2-by-2 matrix $M$ as the Hessian of the map
 \begin{align*}
@@ -344,6 +350,7 @@ where we have used the definition of $\xi$ and the previous step to say that $D\
 \end{proof}
 
 \section{Buckling of general nonlinear elastic structures}
+\label{sec:general-buckling}
 
 Consider an elastic structure whose kinematically admissible configurations are described by the elements $u$ of a reflexive Banach space $V$. Assume that the energy of the structure comprehensive of both the elastic energy and the energy of the loads is
 \[
@@ -390,7 +397,7 @@ Acting with this equality on $v_c$ and using that $F_c'$ is self-adjoint we have
 \]
 Since $\hat{F}_cv_c\neq0$ it follows that $\dot\lambda_0=0$ and substituting back into~\eqref{eqn:eq-diff} we have $\dot u_0\in N(F_c')$. The typical situation is depicted in Figure~\ref{fig:critical-points}~(a).
 \begin{rmk}
-Clearly there can be more then one curve passing through $(u_c,\lambda_c)$. In this case all this curves would intersect tangentially but $(u_c,\lambda_c)$ would not a limit point but actually a bifurcation point. See Figure~\ref{fig:critical-points}~(b). Anyway we will not deal with such situation.
+Clearly there can be more then one curve passing through $(u_c,\lambda_c)$. In this case all this curves would intersect tangentially, but $(u_c,\lambda_c)$ would not be a limit point but actually a bifurcation point. See Figure~\ref{fig:critical-points}~(b). Anyway we will not deal with such situation.
 \end{rmk}
 
 \begin{figure}[t]
@@ -547,6 +554,7 @@ In the discussion of previous Subsection we supposed that $F_c''v_c^3\neq0$. The
 \end{rmk}
 
 \subsection{Koiter asymptotic analysis}
+\label{subsec:koiter}
 
 Theorem~\ref{thm:main} make rigorous the asymptotic analysis of buckled structures introduced by Koiter~\cite{koiter} in 1942. It consists in the asymptotic approximation of the bifurcating curve near the bifurcation point. We will give now a brief description of it. In the following discussion we assume that $r\ge6$.
 
@@ -621,7 +629,7 @@ where $u\colon[0,L]\to\mathbb{R}$ and $u(x)$ represent the angle between the ver
 
 \paragraph{Statics} Consider the portion of the beam corresponding to positions in the interval $[x_0,x]$. Let $n^+(x)$ and $n^-(x_0)$ the internal forces acting on this portion in its extremities. Let also $f(y)$ be the external force per unit length acting at position $y$. Then the balance of forces reads
 \[
-n^+(x)-n^-(x_0)+\int_{x_0}^xf(y)dy=0.
+n^+(x)+n^-(x_0)+\int_{x_0}^xf(y)dy=0.
 \]
 By choosing $x_0=x$ and supposing $f$ to be absolutely continuous with respect to Lebesgue measure, it follows that $n^+(x)=-n^-(x)$ which we call simply $n(x)$. By differentiating with respect to $x$ the above balance of forces we obtain its equivalent local version
 \[
@@ -643,13 +651,13 @@ m'+p'\times n+g=0.
 All the torques are orthogonal to the plane of the beam. In particular we can write $m=Me_3$ and $g=Ge_3$ where $e_3$ is the unit vector orthogonal to the plane. 
 \end{rmk}
 
-\paragraph{Euler's constitutive assumption} The elastica theory is characterized by the following constitutive assumption. That the internal moment at position $x$ is given by
+\paragraph{Euler's constitutive assumption} The elastica theory is characterized by the following constitutive assumption. That the internal torque at position $x$ is given by
 \[
 M(x)=-EI(x)u'(x),
 \]
 where $EI(x)>0$ is a measure of the local stiffness of the beam and $u'(x)$ is the local curvature. The mechanical meaning of the minus sign can be easily understood.
 \begin{rmk}
-There are no constitutive assumptions on the internal force $n$. Indeed since the beam is inextensible and inshearable the the tension and shear forces act as Lagrange multipliers to ensure that constraints.
+There are no constitutive assumptions on the internal force $n$. Indeed since the beam is inextensible and inshearable then the tension and shear forces act as Lagrange multipliers to ensure that constraints.
 \end{rmk}
 
 \subsection{Formulation of the problem}
@@ -802,56 +810,60 @@ The result of this analysis are in Figure~\ref{fig:euler-beam} (b).
 \section{Buckling of hyperelastic continuous bodies}
 \label{sec:body}
 
-In this Section we apply the theory of elastic buckling to hyperelastic continuous bodies.
+In this Section we describe our attempts, far to be complete, to apply the general theory of elastic buckling developed in Section~\ref{sec:general-buckling} to nonlinear hyperelastic continuous bodies, limiting ourself to the Green--Kirchhoff constitutive theory.
 
 \subsection{The theory of nonlinear hyperelastic materials}
 
-We start with a brief introduction to the theory of nonlinear hyperelastic materials. More details can be found in~\cite{gurtin-anand-fried} and~\cite{ball-convexity}.
+We start with a brief introduction to the theory of nonlinear hyperelastic materials. The thermomechanical foundations can be found in~\cite{gurtin-anand-fried}. The main known results concerning the well-posedness of the mathematical problems connected to this theory are collected in~\cite{ciarlet}.
 
-\paragraph{Reference configuration and deformed configuration} Let $\Omega$ be an open bounded subset of $\mathbb{R}^2$, with Lipschitz boundary. Consider an elastic body whose reference configuration is $\Omega$. A deformed configuration of the body is described by the placement $p\colon\Omega\to\mathbb{R}^2$, so $p(x)$ is the position occupied by material point initially at $x$. We assume $p\in W^{1,p}(\Omega)^2$ for some $p\in(1,\infty)$.
+\paragraph{Reference configuration and deformed configuration} Let $\Omega$ be an open bounded subset of $\mathbb{R}^2$, with Lipschitz boundary. Consider an elastic body whose reference configuration is $\Omega$. A deformed configuration of the body is described by the placement $p\colon\Omega\to\mathbb{R}^2$, where $p(x)$ is the position occupied by material point initially at $x$. The configuration of the body can be equivalently described by the displacement defined by $u(x)=p(x)-x$. We assume $u\in W^{2,p}(\Omega)^2$ for some $p\in(2,\infty)$.
 
 \begin{rmk}
-With that choice of $p$ the space $W^{1,p}(\Omega)^2$ is a reflexive Banach space.
+With that choice of $p$ the space $W^{2,p}(\Omega)^2$ is a reflexive Banach space.
 \end{rmk}
 
-\paragraph{Dirichlet boundary conditions} Let $\Gamma_D$ be a relatively open subset of $\partial\Omega$ with strictly positive Hausdorff measure. Suppose that the body is constrained so that $p=g$ in $\Gamma_D$ in the sense of trace, where $g\in W^{1,p}(\Omega)^2$ is fixed. We introduce the space
+\paragraph{Dirichlet boundary conditions} Let $\Gamma_D$ be a relatively open subset of $\partial\Omega$ with strictly positive Hausdorff measure. Suppose that the body is constrained so that $u(x)=0$ in $\Gamma_D$. We introduce the space
 \[
-V=\{v\in W^{1,p}(\Omega)^2\;|\;\text{$v=0$ in $\Gamma_D$ in the sense of trace}\}.
+V=\{v\in W^{2,p}(\Omega)^2\;|\;\text{$v=0$ in $\Gamma_D$ in the sense of trace}\}.
 \]
-Then we can write $p=g+u$ where the displacement $u\in V$ can be considered as a new descriptor of the configuration of the body. In what follows we assume that $g(x)=x$ a.e. in $\Omega$. This means that we are simply keeping fixed the portion $\Gamma_D$ of the boundary. In this case $p(x)=x+u(x)$ and $u=0$ correspond to the reference configuration.
+Then the descriptor of the configuration of the body is any $u\in V$. The case $u=0$ correspond to the reference configuration.
 
-\paragraph{Measures of strain} The first measure of strain that we consider is the deformation gradient is defined as $F=Du=I+H$ where $H=Du$. Another measure of strain which is rotational invariant is the Green--St. Venant strain tensor defined as
+\paragraph{Local measures of strain} The first local measure of strain that we consider is the deformation gradient is defined as $F=Du=I+H$ where $H=Du$. Another local measure of strain which is rotational invariant is the Green--St. Venant strain tensor defined as
 \[
 E=\frac{F^TF-I}{2}=\frac{H+H^T+H^TH}{2}.
 \] 
 
-\paragraph{Elastic energy density} The basis assumption of hyperelasticity is that the free (or elastic) energy density $W$ depends locally on the strain through a constitutive relation. Assuming the material to be homogeneous, this means that $W(x)=\hat{W}(F(x))=\overline{W}(E(x))$ where $\hat{W}\colon\text{Lin}\to\mathbb{R}$ and $\overline{W}\colon\text{Sym}\to\mathbb{R}$. We will assume that $\overline{W}$ is the one given by the Green--Kirchhoff constitutive theory (see~\cite{truesdell-noll}), i.e.,
+\paragraph{Elastic energy density} The basic assumption of hyperelasticity is that the free (or elastic) energy density $W$ depends locally on the strain through a constitutive relation. Assuming the material to be homogeneous on isotropic, this means that pointwise in $\Omega$ should hold a relation of the form
+\[
+W(x)=\hat{W}(F(x))=\overline{W}(E(x))
+\]
+where $\hat{W}\colon\text{Lin}\to\mathbb{R}$ and $\overline{W}\colon\text{Sym}\to\mathbb{R}$. In what follows we will limit ourself to the Green--Kirchhoff constitutive theory (see~\cite{truesdell-noll}) which is based on the choice
 \[
 \overline{W}(E)=\frac{\gamma}{2}(\tr E)^2+\mu|E|^2,
 \]
-where $\gamma$ and $\mu$ are positive constants.
+where $\gamma$ and $\mu$ are positive constants. This constitutive model describes well the behavior of steel in the presence of not too large deformations.
 
 \begin{rmk}
 The corresponding function $\hat{W}$ is
 \[
 \hat{W}(F)=\frac{\gamma}{8}\left(|F|^2-2\right)^2+\frac{\mu}{4}\left|F^TF-I\right|^2.
 \]
-We also report below its gradient and hessian because they will be useful later.
-\begin{gather}
-\nabla \hat W(F)=\lambda\frac{|F|^2-2}{2}F+\mu(FF^TF-F),\nonumber\\
-\begin{split}
-D^2\hat W(F)KH=\lambda&\left((F\cdot H)(F\cdot K)+\frac{|F|^2-2}{2}K\cdot H\right)+\\
-&+\mu\left((KF^T)\cdot(HF^T)+(K^TF)\cdot(F^TH)+(F^TK)\cdot(F^TH)-K\cdot H\right).
-\label{eqn:D2W}
-\end{split}
-\end{gather}
+%We also report below its gradient and hessian because they will be useful later.
+%\begin{gather}
+%\nabla \hat W(F)=\lambda\frac{|F|^2-2}{2}F+\mu(FF^TF-F),\nonumber\\
+%\begin{split}
+%D^2\hat W(F)KH=\lambda&\left((F\cdot H)(F\cdot K)+\frac{|F|^2-2}{2}K\cdot H\right)+\\
+%&+\mu\left((KF^T)\cdot(HF^T)+(K^TF)\cdot(F^TH)+(F^TK)\cdot(F^TH)-K\cdot H\right).
+%\label{eqn:D2W}
+%\end{split}
+%\end{gather}
 \end{rmk}
 
 \paragraph{Elastic energy of the body} The total elastic energy associated to a displacement $u\in V$ is obtained by integrating the elastic energy density over the whole body:
 \[
 \Phi(u)=\int_\Omega\hat W(I+Du)d\mathscr{L}=\int_\Omega\overline W\left(\frac{Du+(Du)^T+(Du)^TDu}{2}\right)d\mathscr{L}.
 \]
-This energy is well defined if we choose $p=4$. In this case $\Phi\in C^\infty(V)$.
+Using that the embedding of $W^{1,p}(\Omega)$ into $C^0(\overline\Omega)$ is continuous for $p>2$, we can easily see that $\Phi\in C^\infty(V)$.
 
 \paragraph{Energy of the loads} Suppose that on $\Gamma_N\subset\partial\Omega$, relatively open and disjoint from $\Gamma_D$, acts a traction $h\in L^{p'}(\Gamma_N)^2$. Then the energy associated to that load is
 \[
@@ -864,7 +876,7 @@ This energy is well defined if we choose $p=4$. In this case $\Phi\in C^\infty(V
 \]
 where we have introduced the multiplicative parameter $\lambda\in\mathbb{R}$ that represent the intensity of the traction. It is clear that $\Pi\in C^\infty(V\times\mathbb{R})$.
 
-\paragraph{Equilibrium equation} We now show that the equilibrium equation associated to the energy $\Pi$ corresponds to the weak form of the local balance of forces of continuum solid mechanics. Indeed we have that
+\paragraph{The equilibrium equation} We now formally show that the equilibrium equation associated to the energy $\Pi$ corresponds to the weak form of the local balance of forces of continuum solid mechanics. Indeed we have that
 \[
 F(u,\lambda)v=\Pi(u,\lambda)v=\int_\Omega \nabla\hat{W}(I+Du)\cdot Dvd\mathscr{L}-\lambda\int_{\Gamma_N}h\cdot vd\mathscr{H},
 \]
@@ -878,49 +890,57 @@ u=0 & \text{in $\Gamma_D$} \\
 \]
 This is indeed the local balance of forces: we recognize the Piola stress tensor $S=\nabla \hat{W}(F)$.
 
+\begin{rmk}
+\label{rmk:open-problems}
+In~\cite{ciarlet} is proved an existence theorem for the equilibrium problem valid for small loads based on the Inverse Function Theorem. This result is not directly applicable to the boundary problem we are considering because it requires that displacements boundary conditions are imposed on the whole boundary. As pointed out in~\cite{open-problems}, there are no existence theorems valid for mixed displacement and traction boundary-value problems based on an analogous technique yet. The theorems proved in~\cite{ball-convexity} cover also this case but they actually establish the existence of energy minimizers. Since it is not fully understood if these minimizers are also solutions to the weak form of the equilibrium equation, these results are not useful for our analysis.
+\end{rmk}
+
 \subsection{On the applicability of the local bifurcation theorem}
 
-We start with the following technical lemma.
-\begin{lemma}
-For all $u\in V$ and $\lambda\in\mathbb{R}$ the operator $F'(u,\lambda)\in\mathscr{L}(V,V')$ is coercive, i.e., there exists $\alpha>0$ such that $F'(u,\lambda)v^2\ge\alpha\norm{v}_V^4$ for all $v\in V$.
-\end{lemma}
-\begin{proof}[Sketch of the proof]
-By using~\eqref{eqn:D2W} and Young inequality can be easily shown that
-\[
-D^2\hat W(F)H^2\ge\text{c}|H|^4\quad\text{for all $H\in\text{Lin}$},
-\]
-where $c$ is a positive constant. Then
-\[
-F'(u,\lambda)v^2=\int_\Omega D^2\hat{W}(I+Du)(Dv)^2d\mathscr{L}\ge c|\Omega|\norm{Dv}_{L^4}^4.
-\]
-By Poincarè inequality there exists $C>0$ such that $\norm{u}_{L^4}\le\norm{Du}_{L^4}$ and the thesis follows.
-\end{proof}
+To verify the hypotheses of Theorem~\ref{thm:main} we would first like to prove the existence of a fundamental path of class $C^2$ passing thought a critical point. If this were true then hypotheses (i), (iv), (v) and (vi) would be immediately satisfied. Unfortunately, to establish this result we would first have to overcome the difficulties highlighted in the Remark~\ref{rmk:open-problems}, and this is clearly beyond our capabilities.
 
-We know prove that $F'(u,\lambda)$ has closed range. Since we know also that $F'(u,\lambda)=\Pi''(u,\lambda)$ is self-adjoint, this result will allow us to apply Proposition~\ref{prop:range-adj}.
+Assuming that this first issue has been resolved, the validity of hypotheses (ii) and (iii) would still remain to be established. We do not deal with hypothesis (iii) because it should be discussed case-by-case: for example we expect that it does not hold when the reference configuration $\Omega$ has too much symmetries. Let us focus instead on hypothesis (ii). That $F_c'$ is self-adjoint was pointed out in Remark~\ref{rmk:adj}. Then we would have liked to prove that $F'(u,\lambda)$ has closed range for every $u\in V$ and $\lambda\in\mathbb{R}$. The closest result we were able to obtain is the following.
+%We start with the following technical lemma.
+%\begin{lemma}
+%For all $u\in V$ and $\lambda\in\mathbb{R}$ the operator $F'(u,\lambda)\in\mathscr{L}(V,V')$ is coercive, i.e., there exists $\alpha>0$ such that $F'(u,\lambda)v^2\ge\alpha\norm{v}_V^4$ for all $v\in V$.
+%\end{lemma}
+%\begin{proof}[Sketch of the proof]
+%By using~\eqref{eqn:D2W} and Young inequality can be easily shown that
+%\[
+%D^2\hat W(F)H^2\ge\text{c}|H|^4\quad\text{for all $H\in\text{Lin}$},
+%\]
+%where $c$ is a positive constant. Then
+%\[
+%F'(u,\lambda)v^2=\int_\Omega D^2\hat{W}(I+Du)(Dv)^2d\mathscr{L}\ge c|\Omega|\norm{Dv}_{L^4}^4.
+%\]
+%By Poincarè inequality there exists $C>0$ such that $\norm{u}_{L^4}\le\norm{Du}_{L^4}$ and the thesis follows.
+%\end{proof}
+%
+%We know prove that $F'(u,\lambda)$ has closed range. Since we know also that $F'(u,\lambda)=\Pi''(u,\lambda)$ is self-adjoint, this result will allow us to apply Proposition~\ref{prop:range-adj}.
 \begin{lemma}
-For all $u\in V$ and $\lambda\in\mathbb{R}$ the operator $F'(u,\lambda)\in\mathscr{L}(V,V')$ has closed range.
+Let $u\in V$ and $\lambda\in\mathbb{R}$ and assume that $F'(u,\lambda)\in\mathscr{L}(V,V')$ is coercive, i.e., there exists $\alpha>0$ such that $F'(u,\lambda)v^2\ge\alpha\norm{v}_V^\beta$ for all $v\in V$, where $\alpha>0$ and $\beta>1$. Then $F'(u,\lambda)\in\mathscr{L}(V,V')$ has closed range.
 \end{lemma}
 \begin{proof}
 Call $L=F'(u,\lambda)$. Let $\{f_n\}\subset R(L)$, so $f_n=Lv_n$ for some $\{v_n\}\subset V$. Assume that $f_n\to f$ in $V'$. We have to show that there exists $v\in V$ such that $f=Lv$.
 
-Now from previous lemma
+Now from hypothesis
 \[
-\alpha\norm{v_n-v_m}_V^4\le L(v_n-v_m)^2=\dual{f_n-f_m,v_n-v_m}\le\norm{f_n-f_m}_{V'}\norm{v_n-v_m}_V. 
+\alpha\norm{v_n-v_m}_V^\beta\le L(v_n-v_m)^2=\dual{f_n-f_m,v_n-v_m}\le\norm{f_n-f_m}_{V'}\norm{v_n-v_m}_V. 
 \]
 Then
 \[
-\alpha\norm{v_n-v_m}_V^3\le\norm{f_n-f_m}_{V'}.
+\alpha\norm{v_n-v_m}_V^{\beta-1}\le\norm{f_n-f_m}_{V'}.
 \]
 Since $\{f_n\}$ is a Cauchy sequence, also $\{v_n\}$ is a Cauchy sequence. Then $v_n\to v$ in $V$ to some $v$. By continuity $f=Lv$.
 \end{proof}
 
-To apply the local bifurcation theorem we would first like to prove the existence of a fundamental path of class $C^2$ passing through a critical point. Since this seems a nontrivial task, we assume that a $C^2$ fundamental path $\lambda\mapsto(u^*(\lambda),\lambda)$, with $\lambda\in[0,\Lambda]$, exists. We also assume that there exists a minimum $\lambda_c\in(0,\Lambda)$ such that $(u_c,\lambda_c)=(u_c^*,\lambda_c)$ is a critical point.
-
-Then Theorem~\ref{thm:main} applies if $F_c''\hat{u}_c^*v_c^2+\hat{F}_c'v_c^2\neq0$. Clearly this condition must be checked once the critical point has been determined.
-
 \subsection{Finite element implementation of Koiter asymptotic analysis}
 
-We know present a finite element implementation of Koiter asymptotic analysis based on~\cite{casciaro}.
+If we formally apply the Finite Element Method to the model of hyperelastic continuous bodies we get a \emph{new} finite dimensional model which is still included in the general theory of Section~\ref{sec:general-buckling}. Clearly the difficulties that we encounter in the original infinite dimensional problem now disappear.
+
+We now outline the application Koiter asymptotic analysis to the discretized finite element model. We will not deal with establishing the convergence of the method nor will we study the relationship between the discretized model and the original continuous one. The main ideas are based on~\cite{casciaro}.
+
+The MATLAB implementation is available at~\url{https://github.com/bernardo-ardini/dynamical-systems-project.git}.
 
 \paragraph{Finite element approximation} Suppose $\Omega$ be polygonal and let $\mathscr{T}_h$ be a triangulation of it. We approximate the space $V$ with the continuous $\mathbb{P}_1$ finite element space $V_h$ of piecewise linear function on $\mathscr{T}_h$.
 
@@ -942,11 +962,11 @@ for $v\in V$ and $\lambda\in\mathbb{R}$. By linearization this becomes
 \[
 (F'_0+\lambda F''_0\hat u^*_0+\lambda\hat F'_0)v=0\iff\Phi''_0v=-\lambda(\Phi'''_0\hat u^*_0)v,
 \]
-which is a generalized eigenvalue problem that can be easily solved numerically. The smallest eigenvalue is the critical load $\lambda_c$ and the corresponding eigenvector is $v_c$. In this way we have found also $u_c=\lambda_c\hat u^*_0$.
+which is a generalized linear eigenvalue problem that can be easily solved numerically. The smallest eigenvalue is the critical load $\lambda_c$. In the examples we will show the interspace has dimension one. Let $v_c$ an eigenvector. Once $\lambda_c$ has been determined we have also $u_c=\lambda_c\hat u^*_0$.
 
-\paragraph{Second order approximation of the buckling path} Now by using~\eqref{eqn:lambda-dot},~\eqref{eqn:first-order},~\eqref{eqn:w-ddot} and ~\eqref{eqn:labda-ddot}, we can approximate the buckling path up to first order.
+\paragraph{Second order approximation of the buckling path} By applying the formulas of Subsection~\ref{subsec:koiter} we can approximate the buckling path up to second order.
 
-\paragraph{Some examples} In the figures below are reported some examples. On the left is reported the body in its reference configuration. In the center is reported the body in the pre-buckling configuration. On the right is the first order approximation of an equilibrium configuration along the buckling path.
+\paragraph{Some examples} In the figures below are reported some examples. On the left is reported the body in its reference configuration. In the center is reported the body in the critical configuration. On the right is the second order approximation of an equilibrium configuration along the buckling path.
 
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{../fem/examples/beam.pdf}
@@ -965,10 +985,10 @@ which is a generalized eigenvalue problem that can be easily solved numerically.
 \caption{Round arch under uniform pressure on the top.}
 \end{figure}
 
-\appendix
-
+\newpage
 \nocite{antman}
 \nocite{brezis}
+\nocite{evans}
 \printbibliography
 
 \end{document}

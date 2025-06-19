@@ -61,6 +61,7 @@
       \strng{authorbibnamehash}{d59843927c90e2aa3fa749ebbf495e28}
       \strng{authornamehash}{d59843927c90e2aa3fa749ebbf495e28}
       \strng{authorfullhash}{d59843927c90e2aa3fa749ebbf495e28}
+      \field{extraname}{1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -71,6 +72,35 @@
       \field{year}{1976}
       \field{pages}{337\bibrangedash 403}
       \range{pages}{67}
+    \endentry
+    \entry{open-problems}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=d59843927c90e2aa3fa749ebbf495e28}{%
+           family={Ball},
+           familyi={B\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{fullhash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{bibnamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authorbibnamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authornamehash}{d59843927c90e2aa3fa749ebbf495e28}
+      \strng{authorfullhash}{d59843927c90e2aa3fa749ebbf495e28}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Geometry, Mechanics, and Dynamics}
+      \field{title}{Some open problems in elasticity}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{3\bibrangedash 59}
+      \range{pages}{57}
     \endentry
     \entry{brezis}{book}{}
       \name{author}{1}{}{%
@@ -124,6 +154,55 @@
       \field{dateera}{ce}
       \field{pages}{195\bibrangedash 276}
       \range{pages}{82}
+    \endentry
+    \entry{ciarlet}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8f4868678b32f146658519d06d8e44f6}{%
+           family={Ciarlet},
+           familyi={C\bibinitperiod},
+           given={P.G.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{8f4868678b32f146658519d06d8e44f6}
+      \strng{fullhash}{8f4868678b32f146658519d06d8e44f6}
+      \strng{bibnamehash}{8f4868678b32f146658519d06d8e44f6}
+      \strng{authorbibnamehash}{8f4868678b32f146658519d06d8e44f6}
+      \strng{authornamehash}{8f4868678b32f146658519d06d8e44f6}
+      \strng{authorfullhash}{8f4868678b32f146658519d06d8e44f6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical Elasticity: Three-Dimensional Elasticity}
+      \field{year}{2021}
+    \endentry
+    \entry{evans}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={L.C.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AMS}%
+      }
+      \strng{namehash}{4a9e255c2284d579594ce3ca31bb8812}
+      \strng{fullhash}{4a9e255c2284d579594ce3ca31bb8812}
+      \strng{bibnamehash}{4a9e255c2284d579594ce3ca31bb8812}
+      \strng{authorbibnamehash}{4a9e255c2284d579594ce3ca31bb8812}
+      \strng{authornamehash}{4a9e255c2284d579594ce3ca31bb8812}
+      \strng{authorfullhash}{4a9e255c2284d579594ce3ca31bb8812}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Partial Differential Equations}
+      \field{year}{1999}
+      \true{nocite}
     \endentry
     \entry{gurtin-anand-fried}{book}{}
       \name{author}{3}{}{%
